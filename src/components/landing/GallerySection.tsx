@@ -32,16 +32,38 @@ const GalleryItem: React.FC<GalleryItemProps> = ({ title, imageUrl }) => {
 };
 
 const GallerySection: React.FC = () => {
-  const allGalleryItems = Array.from({ length: 46 }, (_, i) => ({
-    title: `Foto ${i + 1}`,
-    imageUrl: `/assets/images/fotos/NOME-DA-FOTO-${String(i + 1).padStart(2, '0')}.jpg`, // Adjust image naming convention if needed
-  }));
+  const allGalleryItems = [
+    {
+      title: "Natureza Amazônica",
+      imageUrl: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1474&q=80"
+    },
+    {
+      title: "Rio Pimenta Bueno",
+      imageUrl: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+    },
+    {
+      title: "Floresta Tropical",
+      imageUrl: "https://images.unsplash.com/photo-1476231682824-37e0bc46abab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+    },
+    {
+      title: "Cachoeiras",
+      imageUrl: "https://images.unsplash.com/photo-1511497584788-876760111969?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1370&q=80"
+    },
+    {
+      title: "Vida Selvagem",
+      imageUrl: "https://images.unsplash.com/photo-1533415648777-407b626eb0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+    },
+    {
+      title: "Pôr do Sol Amazônico",
+      imageUrl: "https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+    }
+  ];
 
   const initialItemsToShow = 6;
   const [visibleItems, setVisibleItems] = useState(initialItemsToShow);
 
   const handleLoadMore = () => {
-    setVisibleItems(allGalleryItems.length); // Show all items
+    setVisibleItems(allGalleryItems.length);
   };
 
   return (

@@ -6,7 +6,10 @@ const TouristPointsSection: React.FC = () => {
     {
       title: "Parque Ecológico",
       description: "Mantido pela administração municipal, oferece uma excelente oportunidade de contato com a natureza. O parque preserva sua vegetação original em uma área de 6 km². Possui 8 km de trilhas que devem ser percorridas com guias locais, permitindo admirar diferentes tipos de árvores.",
-      images: ["/assets/images/parqueecologico1.jpeg", "/assets/images/parqueecologico2.jpeg"],
+      images: [
+        "https://images.unsplash.com/photo-1476231682824-37e0bc46abab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "https://images.unsplash.com/photo-1470114716159-e389f8712fda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      ],
       address: {
         text: "Rodovia RO 010, Km 34 - Coordenadas Geográficas: 1143372; 06129265",
         link: "https://www.google.com.br/maps/search/parque+natural+municipal+de+pimenta+bueno/@-11.7272085,-61.4920532,1023m/data=!3m1!1e3?entry=ttu"
@@ -15,23 +18,30 @@ const TouristPointsSection: React.FC = () => {
     {
       title: "Praia Fluvial",
       description: "Durante o período de estiagem, rios amazônicos revelam praias arenosas ideais para lazer. Na junção dos rios Pimenta Bueno e Comemoração surgem praias populares entre moradores e visitantes pela qualidade das águas e fácil acesso. Algumas praias mais afastadas necessitam de embarcação para acesso.",
-      images: ["/assets/images/fotos/praia-fluvial.jpg"],
+      images: [
+        "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1450&q=80"
+      ],
     },
     {
       title: "Pesca Esportiva",
       description: "A pesca amadora é popular nos rios Machado, Pimenta Bueno, Comemoração e Roosevelt. Durante a estiagem, os turistas apreciam a diversidade de peixes e a tranquilidade da floresta tropical.",
-      images: ["/assets/images/pesca.jpg"],
+      images: [
+        "https://images.unsplash.com/photo-1603984362497-0a878f607b92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      ],
     },
     {
       title: "Fazenda Seringal do Ouro",
       description: "Remanescente da era do extrativismo da borracha, o seringal preserva infraestrutura para produção de látex. Os visitantes podem observar o processo desde a coleta até o beneficiamento, com destaque para o método tradicional de defumação. Localiza-se a 5 km da BR-364 e 21 km da Vila Guaporé.",
-      images: ["/assets/images/fotos/fazenda-seringal.jpg"],
-      // Address moved to description as per user's text, keeping link if available
+      images: [
+        "https://images.unsplash.com/photo-1517456793572-1d8efbd6fc3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      ],
     },
     {
       title: "Fonte de Água Mineral Lindágua",
       description: "Local conhecido pelo envase e gaseificação de água mineral. Uma opção interessante para quem deseja conhecer o processo de produção de águas minerais da região.",
-      images: ["/assets/images/fotos/fonte-agua.jpg"],
+      images: [
+        "https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      ],
     },
   ];
 
@@ -55,7 +65,7 @@ const TouristPointsSection: React.FC = () => {
               description={point.description}
               images={point.images}
               address={point.address}
-              animationDelay={`${0.1 + index * 0.1}s`} // Apply staggered animation delay
+              animationDelay={`${0.1 + index * 0.1}s`}
             />
           ))}
         </div>

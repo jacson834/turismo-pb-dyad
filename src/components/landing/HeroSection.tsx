@@ -40,9 +40,9 @@ const HeroSection: React.FC = () => {
       className={cn(
         "min-h-[40vh] bg-cover bg-center text-white flex items-center text-center relative overflow-hidden",
         "before:absolute before:inset-0 before:bg-[var(--gradient-forest)] before:z-0",
-        "hero-pattern" // Custom pattern from globals.css
+        "hero-pattern"
       )}
-      style={{ backgroundImage: `url('/assets/images/Pimenta-Bueno-Ro.jpg')` }}
+      style={{ backgroundImage: "url('https://images.unsplash.com/photo-1469827160215-9d29e96e72f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80')" }}
     >
       <div className="container relative z-20">
         <div className="hero-content">
