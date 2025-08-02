@@ -49,6 +49,22 @@
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Custom colors from provided HTML */
+    --pb-primary: 134 57% 48%;      /* Verde escuro da floresta */
+    --pb-primary-glow: 134 65% 65%; /* Verde claro vibrante */
+    --pb-secondary: 25 85% 55%;
+    --pb-accent: 200 95% 45%;
+    --pb-muted: 210 15% 96%;
+    --pb-background: 0 0% 100%;
+    --pb-foreground: 222 15% 15%;
+    
+    /* Gradientes */
+    --gradient-forest: linear-gradient(135deg, hsl(var(--pb-primary)), hsl(var(--pb-primary-glow)));
+    --gradient-water: linear-gradient(135deg, hsl(var(--pb-accent)), hsl(200 85% 55%));
+    
+    /* Transições */
+    --pb-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .dark {
@@ -87,6 +103,11 @@
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Custom colors for dark mode (adjust as needed) */
+    --pb-background: 222.2 84% 4.9%;
+    --pb-foreground: 210 40% 98%;
+    --pb-muted: 217.2 32.6% 17.5%;
   }
 }
 
@@ -96,6 +117,28 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-pb-background text-pb-foreground font-sans leading-relaxed;
+    scroll-behavior: smooth;
   }
 }
+
+/* Custom pattern for hero section */
+.hero-pattern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="white" opacity="0.1"/><circle cx="80" cy="40" r="1" fill="white" opacity="0.1"/><circle cx="60" cy="80" r="1.5" fill="white" opacity="0.1"/></svg>');
+    background-size: 200px 200px;
+    animation: float-pattern 20s infinite linear;
+    z-index: 1;
+}
+
+/* Animation delays for cards */
+.tourist-card:nth-child(1) { animation-delay: 0.1s; }
+.tourist-card:nth-child(2) { animation-delay: 0.2s; }
+.tourist-card:nth-child(3) { animation-delay: 0.3s; }
+.tourist-card:nth-child(4) { animation-delay: 0.4s; }
+.tourist-card:nth-child(5) { animation-delay: 0.5s; }
